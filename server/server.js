@@ -9,6 +9,7 @@ const server = express()
 
 server.engine('hbs', hbs({extname: 'hbs'}))
 server.set('view engine', 'hbs')
+server.set('views', __dirname + '/views')
 server.use(express.urlencoded({extended: true}))
 
 // Routes
