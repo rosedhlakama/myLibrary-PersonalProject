@@ -2,7 +2,7 @@ const request = require('supertest')
 const cheerio = require('cheerio')
 
 const knex = require('knex')
-const config = require('../knexfile').test
+const config = require('../../knexfile').test
 const testDb = knex(config)
 
 const server = require('../server')

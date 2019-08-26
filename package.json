@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "knex": "knex",
-    "dev": "nodemon index",
-    "start": "node index",
+    "dev": "nodemon server/index",
+    "start": "node server/index",
     "test": "jest --watchAll"
   },
   "repository": {
