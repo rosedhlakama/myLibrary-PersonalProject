@@ -1,9 +1,8 @@
 exports.seed = function (knex, Promise) {
   const empty = table =>
-    () => knex(table).del()
+    () => knex(table).delete()
 
   return empty('users')()
-  // Chain calls to empty in
-  // order as required, e.g.:
-  // .then(empty('profiles'))
+    .then(() => empty('favourites')())
+    .then(() => empty('favourites_users')())
 }

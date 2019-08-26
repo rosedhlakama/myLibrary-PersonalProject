@@ -1,14 +1,11 @@
-const testEnv = require('./test-environment')
+const knex = require('knex')
+const config = require('../knexfile').test
+const testDb = knex(config)
+
 const db = require('../db')
 
-let testDb = null
-
-beforeEach(() => {
-  testDb = testEnv.getTestDb()
-  return testEnv.initialise(testDb)
-})
-
-afterEach(() => testEnv.cleanup(testDb))
+beforeAll(() => testDb.migrate.latest())
+beforeEach(() => testDb.seed.run())
 
 test('getUsers gets all users', () => {
   // One for each letter of the alphabet!

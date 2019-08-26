@@ -1,6 +1,3 @@
-const environment = process.env.NODE_ENV || 'development'
-const config = require('./knexfile')[environment]
-const connection = require('knex')(config)
 
 module.exports = {
   getUser,
@@ -9,19 +6,19 @@ module.exports = {
   getUsersWhoLike
 }
 
-function getUsers (db = connection) {
+function getUsers (db) {
   return db('users').select()
 }
 
-function getUser (id, db = connection) {
+function getUser (id, db) {
   return db('users').where('id', id).first()
 }
 
-function addUser(user, db = connection) {
+function addUser(user, db) {
   return db('users').insert(user)
 }
 
-function getUsersWhoLike(favouriteName, db = connection) {
+function getUsersWhoLike(favouriteName, db) {
   return db('users')
     .select('users.*')
     .join('favourites_users', 'favourites_users.user_id', 'users.id')
