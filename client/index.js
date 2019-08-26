@@ -1,3 +1,3 @@
-import {launchApp} from './App.js'
+import {launchApp} from './app.js'
 
 document.addEventListener('DOMContentLoaded', launchApp)
