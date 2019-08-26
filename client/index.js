@@ -1,6 +1,3 @@
-import App from './App.js'
+import {launchApp} from './App.js'
 
-document.addEventListener('DOMContentLoaded', () => {
-  let app = new App()
-  app.render()
-})
+document.addEventListener('DOMContentLoaded', launchApp)
