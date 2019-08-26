@@ -6,8 +6,6 @@
   "scripts": {
     "knex": "knex",
     "dev": "nodemon --watch server & webpack --watch client",
-    "dev-client": "webpack-dev-server --hot --inline --content-base public",
-    "dev-server": "nodemon --watch server",
     "start": "node server/index",
     "test": "jest --watchAll"
   },

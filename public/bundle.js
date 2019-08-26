@@ -86,14 +86,43 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./client/App.js":
+/*!***********************!*\
+  !*** ./client/App.js ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return App; });
+class App {
+  render() {
+    let html = `
+      <h1>Client side rendering! Awesome Sauce!</h1>
+    `;
+    document.getElementById('app').innerHTML = html;
+  }
+
+}
+
+/***/ }),
+
 /***/ "./client/index.js":
 /*!*************************!*\
   !*** ./client/index.js ***!
   \*************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-console.log('hi');
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _App_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.js */ "./client/App.js");
+
+document.addEventListener('DOMContentLoaded', () => {
+  let app = new _App_js__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  app.render();
+});
 
 /***/ })
 
