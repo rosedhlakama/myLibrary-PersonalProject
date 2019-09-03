@@ -1,31 +1,24 @@
 {
-  "name": "my-library-personal-project",
-  "version": "0.1.0",
-  "description": "My Library personal project",
-  "repository": "https://github.com/rosedhlakama/myLibrary-PersonalProject",
-  "main": "index.js",
+  "name": "boilerplate-knex",
+  "version": "0.1.4",
+  "description": "Express boilerplate with Knex.js",
+  "main": "server/index.js",
   "scripts": {
-    "start": "webpack && node server",
-    "dev": "node server/index & webpack --watch",
+    "knex": "knex",
+    "dev": "nodemon --watch server & webpack --watch client",
+    "start": "node server/index",
     "test": "jest --watchAll"
   },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties"
-    ]
-  },
-  "jest": {
-    "testURL":"http://localhost",
-    "setupFiles": [
-      "./tests/setup.js"
-    ]
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dev-academy-challenges/boilerplate-knex.git"
   },
   "author": "EDA",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dev-academy-challenges/boilerplate-knex/issues"
+  },
+  "homepage": "https://github.com/dev-academy-challenges/boilerplate-knex#readme",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
