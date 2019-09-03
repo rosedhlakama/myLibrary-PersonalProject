@@ -3,6 +3,8 @@ const express = require('express')
 const db = require('../db')
 
 const router = express.Router()
+const request = require('superagent')
+module.exports = router
 
 router.get('/', (req, res) => {
   db.getUsers(req.app.connection)
