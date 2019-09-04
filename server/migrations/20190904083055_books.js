@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
         table.increments('id').primary();
         table.string('title');
         table.text('blurb');
-        table.interger('yearPublished');
+        table.integer('yearPublished');
         table.boolean('procured');
         table.date('dateProcured');
    })
