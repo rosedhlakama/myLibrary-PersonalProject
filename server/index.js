@@ -5,7 +5,7 @@ const connection = require('knex')(config)
 const server = require('./server')
 server.connection = connection
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 
 server.listen(port, function () {
   // eslint-disable-next-line no-console

@@ -6,13 +6,22 @@ const router = express.Router()
 
 const request = require('superagent')
 
-module.exports = router
-
-router.get('/', (req, res) => {
-
-        res.render('index')
-    })
-   
-
+const listBooks = require('../../client/app')
 
 module.exports = router
+
+router.get('/v1/books/', (req, res) => {
+    db.getBooks(req.app.connection)
+        .then(response => {
+            res.json(response)
+        })
+        .catch(e => {
+            res.status(500)
+                .send(e.message)
+        })
+
+})
+
+
+
+

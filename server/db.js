@@ -1,20 +1,18 @@
 
 module.exports = {
-  getUser,
-  getUsers,
-  addUser,
-  getUsersWhoLike
+  getBooks,
+  
 }
 
-function getUsers (db) {
-  return db('users').select()
+function getBooks (db) {
+  return db('books').select()
 }
 
-function getUser (id, db) {
+function getBook (id, db) {
   return db('users').where('id', id).first()
 }
 
-function addUser(user, db) {
+function addBook(user, db) {
   return db('users').insert(user)
 }
 
