@@ -10,7 +10,7 @@ const listBooks = require('../../client/app')
 
 module.exports = router
 
-router.get('/v1/books/', (req, res) => {
+router.get('/books', (req, res) => {
     db.getBooks(req.app.connection)
         .then(response => {
             res.json(response)
@@ -23,5 +23,7 @@ router.get('/v1/books/', (req, res) => {
 })
 
 
-
+router.get('/', (req, res) => {
+    res.render('index')
+})
 
